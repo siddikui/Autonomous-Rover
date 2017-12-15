@@ -53,6 +53,12 @@ So we have image data coming in from the camera mounted on the front of the rove
 A perspective transform is of help here in providing a top down view of the rover. It has to be provided with source and destination points to find a transform matrix which can then be applied to rover front facing camera images and get back top down view. This can be thought of a map (code in the Perspective Transform section of the notebook).
 
 ![alt text][image4] ![alt text][image5]
+
+The navigable terrain appears lighter throughout the map and the obstacles darker, therefore it's straight forward thresholding to seperate terrain from obstacles. However, thresholding rock samples require some experimentation with rock colors. I used this [method](http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html) added with some hit and trial for yellow color thresholding (code in the Color Thresholding section of the notebook).  
+
+![alt text][image4] ![alt text][image6]
+
+![alt text][image5] ![alt text][image7]
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 And another! 
 
