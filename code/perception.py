@@ -150,7 +150,7 @@ def perception_step(Rover):
 
     # 7) Update Rover worldmap (to be displayed on right side of screen)
     
-    if( ((Rover.pitch >= 359.25) | (Rover.pitch <= 0.75)) & ((Rover.roll >= 359.25) | (Rover.roll <= 0.75)) ):
+    if( ((Rover.pitch >= 359.5) | (Rover.pitch <= 0.5)) & ((Rover.roll >= 359.5) | (Rover.roll <= 0.5)) ):
         
         Rover.worldmap[obstacle_y_world, obstacle_x_world, 0] += 1
         Rover.worldmap[rock_y_world, rock_x_world, 1] += 1
